@@ -27,10 +27,13 @@
             $price = $arr[1];
             $available = $arr[2];
 
-            $sql = "INSERT INTO cart (item, price)
-            VALUES ('$item','$price')";
+            // make sure item isnt empty
+            if( $item != '' ){
+                $sql = "INSERT INTO cart (item, price)
+                VALUES ('$item','$price')";
 
-            $result=$conn->query($sql);
+                $result=$conn->query($sql);
+            }
 
             if ($conn) {
                 echo $item.' '.$price;

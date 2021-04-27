@@ -10,7 +10,7 @@
 
     <div>
 
-        <h3>Cart</h3>
+        <h3>Shopping Cart</h3>
         <p> Select any items you wish to remove from your cart </p>
         
         <!-- removes any items you want from the cart -->
@@ -23,11 +23,11 @@
             will take you to the checkout, but also should redirect you 
             and update the availablity of the seat in your cart.
         -->
-        <form action="checkOut.php" method="post">
+        <form action="processCheckout.php" method="post">
             <input type="submit" value="Check Out">
         </form><br>
 
-        <a href="../flights.php"><input type="button" id="btn1" value="Home"></a>
+        <a href="../index.html"><input type="button" id="btn1" value="Home"></a>
 
     </div>
     

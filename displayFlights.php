@@ -27,11 +27,17 @@
                 $available = FALSE;
             }
 
-            echo '<p> '.$seatNum.' - $'.$price.' <input name="seat" value="'.$seatNum.'_'.$price.'_'.$available.'" type="radio"> </p>';
+            // if its not available
+            if( !$available ){
+                echo '<p> '.$seatNum.' - $'.$price.' : SOLD OUT </p>';
+            }
+            else{
+                echo '<p> '.$seatNum.' - $'.$price.' <input name="seat" value="'.$seatNum.'_'.$price.'_'.$available.'" type="radio"> </p>';
+            }
                 
         }
     } else {
-        echo "0 results";
+        echo "No Flights currently";
     }
 
     $conn->close();
