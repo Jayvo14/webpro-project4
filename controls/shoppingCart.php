@@ -11,48 +11,23 @@
     <div>
 
         <h3>Cart</h3>
-        <form action="controls/checkOut.php" method="post">
-            
-            <?php 
-                // will show everything in your cart from the 'cart' DB
-               
-                $servername = "localhost";
-                $username = "amustafa3";
-                $password = "amustafa3";
-                $dbname = "amustafa3";
+        <p> Select any items you wish to remove from your cart </p>
+        
+        <!-- removes any items you want from the cart -->
+        <form action="removeFromCart.php" method="post">    
+            <?php include 'displayCart.php' ?>
+            <input type="submit" value="Update Cart">
+        </form><br>
 
-                // Create connection
-                $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-                $sql = "SELECT seatNum, price FROM cart";
-                $result=$conn->query($sql);
-
-                if ( $result->num_rows > 0) {
-
-                    // output data of each row
-                    while($row = $result->fetch_assoc()) {
-                        $seatNum=$row["seatNum"];
-                        $price=$row["price"];
-                        $available=$row["available"];
-
-                        if( $row["available"] == 1 ){
-                            $available = "Yes";
-                        }
-                        else{
-                            $available = "No";
-                        }
-
-                        echo '<p> '.$seatNum.' - $'.$price.' <input name="seat" value="'.$seatNum.'_'.$price.'" type="radio"> </p>';
-                            
-                    }
-                } else {
-                    echo "Cart Empty";
-                }
-            ?>
-
-
+        <!-- 
+            will take you to the checkout, but also should redirect you 
+            and update the availablity of the seat in your cart.
+        -->
+        <form action="checkOut.php" method="post">
             <input type="submit" value="Check Out">
-        </form>
+        </form><br>
+
+        <a href="../flights.php"><input type="button" id="btn1" value="Home"></a>
 
     </div>
     

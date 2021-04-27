@@ -21,13 +21,13 @@
             $available=$row["available"];
 
             if( $row["available"] == 1 ){
-                $available = "Yes";
+                $available = TRUE;
             }
             else{
-                $available = "No";
+                $available = FALSE;
             }
 
-            echo '<p> '.$seatNum.' - $'.$price.' <input name="seat" value="'.$seatNum.'_'.$price.'" type="radio"> </p>';
+            echo '<p> '.$seatNum.' - $'.$price.' <input name="seat" value="'.$seatNum.'_'.$price.'_'.$available.'" type="radio"> </p>';
                 
         }
     } else {

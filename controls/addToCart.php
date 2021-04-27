@@ -10,6 +10,7 @@
 <body>
 	<div>
         <?php
+            header('Location: shoppingCart.php');
             // need to manually do this annoyingly
             $servername = "localhost";
             $username = "amustafa3";
@@ -24,6 +25,7 @@
             
             $item = $arr[0];
             $price = $arr[1];
+            $available = $arr[2];
 
             $sql = "INSERT INTO cart (item, price)
             VALUES ('$item','$price')";
