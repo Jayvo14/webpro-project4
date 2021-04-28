@@ -9,6 +9,7 @@
 <body>
     <h2>Check Out</h2>
     
+    
 
     <a href="../flights.php"><input type="button" id="btn1" value="Home"></a><br>
 </body>

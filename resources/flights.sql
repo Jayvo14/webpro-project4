@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2021 at 05:22 PM
+-- Generation Time: Apr 28, 2021 at 03:07 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -40,14 +40,14 @@ CREATE TABLE `flights` (
 INSERT INTO `flights` (`seatNum`, `price`, `available`) VALUES
 ('A1', 500, 1),
 ('A2', 500, 1),
-('A3', 500, 1),
+('A3', 500, 0),
 ('A4', 500, 1),
 ('B1', 300, 1),
 ('B2', 300, 1),
 ('B3', 300, 1),
 ('B4', 300, 1),
-('C1', 200, 1),
-('C2', 200, 1),
+('C1', 200, 0),
+('C2', 200, 0),
 ('C3', 200, 1),
 ('C4', 200, 1),
 ('D1', 100, 1),
