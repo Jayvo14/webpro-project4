@@ -39,7 +39,7 @@ CREATE TABLE `parking` (
 
 INSERT INTO `parking` (`section`, `price`, `spots`) VALUES
 ('VIP', 100, 6),
-('Premuim', 50, 10),
+('Premium', 50, 10),
 ('Super', 25, 20),
 ('General', 10, 50);
 COMMIT;
