@@ -12,8 +12,10 @@
     <div>
 
         <h2>Parking</h2>
-        <form action="addToCart.php" method="POST">
+        <form action="processParking.php" method="POST">
             <?php  include 'displayParking.php'; ?>
+            
+            <br>
             <input type="submit" class="button" value="Add to Cart">
         </form><br>
 
