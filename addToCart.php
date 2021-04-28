@@ -4,6 +4,9 @@
 
 <head lang="en">
 	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/styles.css">
 	<title>Added to Cart</title>
 </head>
 
@@ -13,8 +16,8 @@
             header('Location: shoppingCart.php');
             // need to manually do this annoyingly
             $servername = "localhost";
-            $username = "amustafa3";
-            $password = "amustafa3";
+            $username = "root";
+            $password = "";
             $dbname = "amustafa3";
 
             // Create connection

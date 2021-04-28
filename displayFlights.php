@@ -2,8 +2,8 @@
 
     // so u dont have to rewrite everything over and over again
     $servername = "localhost";
-    $username = "amustafa3";
-    $password = "amustafa3";
+    $username = "root";
+    $password = "";
     $dbname = "amustafa3";
 
     // Create connection

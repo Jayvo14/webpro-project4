@@ -3,8 +3,8 @@
 
     // need to update the availability of the seat in the flights database from 1 - 0
     $servername = "localhost";
-    $username = "amustafa3";
-    $password = "amustafa3";
+    $username = "root";
+    $password = "";
     $dbname = "amustafa3";
 
     // Create connection

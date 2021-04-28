@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/styles.css">
     <title>Shopping Cart</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
             <input type="submit" value="Check Out">
         </form><br>
 
-        <a href="../index.html"><input type="button" id="btn1" value="Home"></a>
+        <a href="index.html"><input type="button" id="btn1" value="Home"></a>
 
     </div>
     

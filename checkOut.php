@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/styles.css">
     <title>Check Out</title>
 </head>
 <body>
@@ -11,6 +12,6 @@
     
     
 
-    <a href="../flights.php"><input type="button" id="btn1" value="Home"></a><br>
+    <a href="flights.php"><input type="button" id="btn1" value="Home"></a><br>
 </body>
 </html>
