@@ -14,9 +14,9 @@
 
     $arr = explode("_",$seat);
             
-    $item = $arr[0];
+    $section = $arr[0];
     $price = $arr[1];
-    $available = $arr[2];
+    $spots = $arr[2];
 
     
 
@@ -36,6 +36,17 @@
     );
 
     $newPrice = $price + $times[$time];
+
+    echo '<form style="display:none;" id="dateForm" action="addToCart.php" method="POST">';
+    echo '<p> '.$section.' - $'.$newPrice.' <input checked="checked" name="seat" value="'.$section.'_'.$newPrice.'_'.$spots.'" type="radio"> </p>';
+    echo '<input type="submit" name="dateForm" class="button" value="Add to Cart">';
+    echo '</form><br>';
+
+    echo 
+    '<script type="text/javascript">
+        document.getElementById('.'"dateForm"'.').submit();
+    </script>'
+    ;
 
    
 ?>
