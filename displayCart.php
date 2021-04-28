@@ -21,7 +21,7 @@
             $price=$row["price"];
             $id=$row["id"];
               
-            echo "<tr class="."cart-item"."><td>".$item."</td><td>".$price."</td><td><input name="."itemNum[]"."value=".$id." type="."checkbox"."></td></tr>";
+            echo "<tr class="."cart-item"."><td>".$item."</td><td>$".$price."</td><td><input name="."itemNum[]"." value=".$id." type="."checkbox"."></td></tr>";
             //echo '<p class="cart-item"> '.$item.' - $'.$price.' <input name="itemNum[]" value="'.$id.'" type="checkbox"> </p>';
         }
     }

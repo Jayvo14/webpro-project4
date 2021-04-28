@@ -44,6 +44,13 @@ body{
     width: 50%;
 }
 
+#menu2{
+    background-color: #e0dfefb3;
+    border-radius: 5px;
+    padding: 3% 0;
+    margin: 0 auto;
+}
+
 .col{
     float: left;
     width: 50%;
