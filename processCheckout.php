@@ -7,6 +7,8 @@
     $password = "";
     $dbname = "amustafa3";
 
+    $parking = array("VIP", "Premium", "Super", "General");
+
     // Create connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -32,10 +34,17 @@
     foreach( $items as $key => $value ){
         echo $value;
 
-        $sql = "UPDATE flights 
-        SET available = 0 
-        WHERE seatNum = '$value'";
-        $result=$conn->query($sql);
+        if( in_array($value, $parking) ){
+            $sql = "UPDATE parking 
+            SET spots = spots - 1 
+            WHERE section = '$value'";
+            $result=$conn->query($sql);
+        }else{
+            $sql = "UPDATE flights 
+            SET available = 0 
+            WHERE seatNum = '$value'";
+            $result=$conn->query($sql);
+        }
     }
 
     // then we empty the cart

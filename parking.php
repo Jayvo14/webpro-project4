@@ -13,7 +13,7 @@
 
         <h2>Parking</h2>
         <form action="addToCart.php" method="POST">
-            <?php // include 'displayFlights.php'; ?>
+            <?php  include 'displayParking.php'; ?>
             <input type="submit" class="button" value="Add to Cart">
         </form><br>
 
