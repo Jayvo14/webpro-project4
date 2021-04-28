@@ -1,0 +1,96 @@
+/* general styling for the body */
+body{
+    text-align: center;
+    font-size: medium;
+    background-color: #f9f9f5;
+    color: #000000;
+    padding: 0 4%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Does the button styling for the site */
+.button {
+    background-color: #369066; 
+    border-radius: 4px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 2px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #295f39;
+    color: white;
+}
+  
+.button a{
+    text-decoration: none;
+    color: white;
+}
+
+/* all the styling for the main page index.html */
+.menu{
+    /* background-color: #e0dfefb3; */
+    border-radius: 5px;
+    padding: 3% 0;
+    margin: 0 auto;
+    display: flex;
+    width: 50%;
+}
+
+#menu2{
+    background-color: #e0dfefb3;
+    border-radius: 5px;
+    padding: 3% 0;
+    margin: 0 auto;
+}
+
+.col{
+    float: left;
+    width: 50%;
+}
+@media screen and (max-width: 600px) {
+    .col {
+      width: 100%;
+    }
+}
+
+/* all the styling for the cart page shoppingCart.php */
+#cart{
+    background-color: #e0dfefb3;
+    border-radius: 5px;
+    padding: 3% 0;
+    margin: 0 auto;
+    width: 40%;
+    max-height: 75%;
+}
+
+#cart-bottom{
+    margin: 0 auto;
+    display: flex;
+    width: 50%;
+}
+
+.cart-item{
+    font-size: large;
+}
+table, tbody{
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+tr{
+    padding: 4px 0;
+    border-bottom: 2px solid #000000;
+}
+td{
+    display: table-cell;
+    padding: 10% 15%;
+    margin: auto;
+}

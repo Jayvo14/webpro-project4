@@ -3,8 +3,8 @@ header('Location: shoppingCart.php');
 
     // need to manually do this annoyingly
     $servername = "localhost";
-    $username = "amustafa3";
-    $password = "amustafa3";
+    $username = "root";
+    $password = "";
     $dbname = "amustafa3";
 
     // Create connection
