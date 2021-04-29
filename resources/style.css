@@ -68,6 +68,7 @@ a:active, a:visited{
     color:#000000;
 }
 
+/* here until '.floating' was INSPIRED BY w3 SCHOOLS */
 .container{
     position: relative;
 }
@@ -91,6 +92,18 @@ a:active, a:visited{
 }
 .container:hover .overlay {
     opacity: 1;
+}
+.floating {  
+    animation-name: float;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+  
+@keyframes float {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
 }
 @media screen and (max-width: 600px) {
     .col {
