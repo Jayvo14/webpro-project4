@@ -25,8 +25,8 @@
             
             <br>
             <div id="paddTC" class="row">
-                <input id="phome" type="submit" class="button" value="Add to Cart">
                 <a id="phome" href="index.html"><input type="button" class="button" id="btn1" value="Home"></a>
+                <input id="phome" type="submit" class="button" value="Add to Cart">
             </div>
         </form><br>
 

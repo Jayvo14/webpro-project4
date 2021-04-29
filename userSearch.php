@@ -16,6 +16,7 @@
             <input type="text" name="username"><br><br>
             <input type="submit" class="button" value="Search for User">
         </form><br>
+        <a href="index.html"><input type="button" class="button" id="btn1" value="Home"></a><br>
     
     </div>
 </body>
