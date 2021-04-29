@@ -11,7 +11,7 @@
 
     <div>
 
-        <h3>Shopping Cart</h3>
+        <h1>Shopping Cart</h1>
         
         <!-- removes any items you want from the cart -->
         <div id="cart">
