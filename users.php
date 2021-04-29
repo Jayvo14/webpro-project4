@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div>
+    <div id="userForm">
 
         
         <?php   
@@ -39,7 +39,7 @@
             
             
         
-              if ($result->num_rows > 0) {
+            if ($result->num_rows > 0) {
         
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
@@ -65,7 +65,8 @@
                         
                 }
             
-            } else {
+            } 
+            else {
                 echo "User does not exist";
             }
             if(!$found){
@@ -74,11 +75,9 @@
             }
         
             $conn->close();
-    ?>    
+        ?>    
          
-
         <a href="index.html"><input type="button" class="button" id="btn1" value="Home"></a>
-
     </div>
     
 </body>

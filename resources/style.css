@@ -47,12 +47,15 @@ body{
 #menu2{
     background-color: #e0dfefb3;
     border-radius: 5px;
-    padding: 3% 0;
-    margin: 0 auto;
+    margin: 5% 25%;
+    padding: 5% 0%;
 }
 
 .col{
     float: left;
+    width: 50%;
+}
+.row{
     width: 50%;
 }
 @media screen and (max-width: 600px) {
@@ -84,6 +87,7 @@ table, tbody{
     margin: 0 auto;
     text-align: center;
     width: 50%;
+    padding: 3% 0;
 }
 tr{
     padding: 4px 0;
@@ -91,6 +95,66 @@ tr{
 }
 td{
     display: table-cell;
-    padding: 10% 15%;
+    padding: 5% 3%;
     margin: auto;
+}
+
+
+
+/* styling for userSearch.php and users.php */
+#userForm{
+    margin: 10% 20%;
+    padding: 5% 0%;
+    background-color: #e0dfefb3;
+    border-radius: 5px;
+}
+
+
+/* styling for flights.php and displayFlights.php */
+#ftitle{
+    z-index: 3;
+}
+#flights{
+    background-color: #e0dfefb3;
+    border-radius: 5px;
+    margin: -6% 25% 5% 25%;
+    padding: 5% 0% 5% 0%;
+    z-index: 1;
+}
+#fimg{
+    max-width: 33%;
+    border-radius: 100%;
+    z-index: 2;
+    margin: -2% 0 0 0;
+}
+.grid{
+    margin: 0 auto;
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    grid-template-columns: 0fr 0fr 0fr 0fr;
+}
+#fcell{
+    width: max-content;
+    padding-left: 3px;
+}
+
+/* styling for parking.php and displayFlights.php */
+#parking{
+    background-color: #e0dfefb3;
+    border-radius: 5px;
+    margin: 5% 25% 5% 25%;
+    padding: 5% 0% 5% 0%;
+    z-index: 1;
+}
+#paddTC{
+    display: inline-block;
+    padding: 5%;
+}
+#phome{
+    margin: 5%;
+}
+#identP{
+    text-decoration: underline;
+    font-weight: bold;
 }

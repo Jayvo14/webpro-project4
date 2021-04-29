@@ -12,7 +12,6 @@
     <div>
 
         <h3>Shopping Cart</h3>
-        <p> Select any items you wish to remove from your cart </p>
         
         <!-- removes any items you want from the cart -->
         <div id="cart">
@@ -25,6 +24,7 @@
                     </tr>
                 <?php include 'displayCart.php' ?>
                 </table>
+                <p> Select any items you wish to remove from your cart </p>
                 <input type="submit" class="button" value="Update Cart">
             </form>
         </div><br>

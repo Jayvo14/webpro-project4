@@ -9,11 +9,14 @@
 </head>
 <body>
 
-    <div>
+    <br><h1 id="ftitle">Flights</h1><br>
+    <img src="resources/flight.PNG" alt="seat-map" id="fimg" >
 
-        <h2>Flights</h2>
+    <div id="flights">
         <form action="addToCart.php" method="POST">
-            <?php include 'displayFlights.php'; ?>
+            <section class="grid">
+                <?php include 'displayFlights.php'; ?>
+            </section><br>
             <input type="submit" class="button" value="Add to Cart">
         </form><br>
 

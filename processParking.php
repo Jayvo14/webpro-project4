@@ -1,5 +1,4 @@
 <?php
-    //header('Location: addToCart.php');
 
     // need to update the availability of the seat in the flights database from 1 - 0
     $servername = "localhost";

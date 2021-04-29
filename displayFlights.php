@@ -29,10 +29,10 @@
 
             // if its not available
             if( !$available ){
-                echo '<p> '.$seatNum.' - $'.$price.' : SOLD OUT </p>';
+                echo '<p id="fcell"> '.$seatNum.' - <b>SOLD OUT</b> </p>';
             }
             else{
-                echo '<p> '.$seatNum.' - $'.$price.' <input name="seat" value="'.$seatNum.'_'.$price.'_'.$available.'" type="radio"> </p>';
+                echo '<p id="fcell"> '.$seatNum.' - $'.$price.' <input name="seat" value="'.$seatNum.'_'.$price.'_'.$available.'" type="radio"> </p>';
             }
                 
         }

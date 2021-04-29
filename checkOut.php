@@ -12,6 +12,6 @@
     
     
 
-    <a href="index.html"><input type="button" id="btn1" value="Home"></a><br>
+    <a href="index.html"><input class="button" type="button" id="btn1" value="Home"></a><br>
 </body>
 </html>
