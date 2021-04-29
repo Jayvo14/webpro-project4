@@ -82,6 +82,7 @@ body{
 
 .cart-item{
     font-size: large;
+    border-bottom: 2px solid #0000001e;
 }
 table, tbody{
     margin: 0 auto;
@@ -91,12 +92,15 @@ table, tbody{
 }
 tr{
     padding: 4px 0;
-    border-bottom: 2px solid #000000;
 }
 td{
     display: table-cell;
     padding: 5% 3%;
     margin: auto;
+    border-bottom: 2px solid #0000001e;
+}
+#cartImg{
+    max-width: 25%;
 }
 
 

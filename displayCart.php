@@ -18,6 +18,14 @@
 
     if ( $result->num_rows > 0) {
 
+        // make the headers for the table of the cart
+        echo '<table>
+                <tr class="cart-item">
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>';
+
         // output data of each row
         while($row = $result->fetch_assoc()) {
 
@@ -32,8 +40,13 @@
                 echo "<tr class="."cart-item"."><td>".$item." Flight Ticket</td><td>$".$price."</td><td><input name="."itemNum[]"." value=".$id." type="."checkbox"."></td></tr>";
             }
         }
+
+        echo '</table>';
+        echo '<p> Select any items you wish to remove from your cart </p>';
+        echo '<input type="submit" class="button" value="Update Cart">';
     }
     else {
-        echo "Cart Empty";
+        echo "<p> Cart Empty </p> <br>";
+        echo '<img src="resources/emptyCart.png" alt="empty-cart" id="cartImg">';
     }
 ?>
