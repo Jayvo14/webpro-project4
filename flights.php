@@ -21,10 +21,8 @@
                 <a id="fhome" href="index.html"><input type="button" class="button" id="btn1" value="Home"></a>
                 <input id="fhome" type="submit" class="button" value="Add to Cart">
             </div>
-            <!-- <input type="submit" class="button" value="Add to Cart"> -->
         </form><br>
 
-        <!--<a href="index.html"><input type="button" class="button" id="btn1" value="Home"></a> -->
 
     </div>
     
