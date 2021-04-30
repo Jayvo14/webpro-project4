@@ -80,6 +80,7 @@ body{
     width: 50%;
 }
 .indexImgs{
+    color: #000000;
     max-width: 75%;
     border-radius: 5px;
     box-shadow: 5px 5px;
