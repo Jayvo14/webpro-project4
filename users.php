@@ -50,7 +50,7 @@
         
                         $array=explode(",",$purchases);
                         $found=True;
-                        echo "<h2> " .$uName."'s Past Purchases </h2> <br> ";
+                        echo "<h1> " .$uName."'s Past Purchases </h1> <br> ";
                     
             
                         foreach($array as $key => $value){
@@ -60,6 +60,7 @@
                             else if(in_array($value,$flights)){
                                 echo "<p>  ".$value." Flight Ticket  </p>" ;
                             }
+                            echo '<hr>';
                         }
                     }
                         
@@ -76,8 +77,8 @@
         
             $conn->close();
         ?>    
-         
-        <a href="index.html"><input type="button" class="button" id="btn1" value="Home"></a>
+        
+        <br><br> <a href="index.html"><input type="button" class="button" id="btn1" value="Home"></a>
     </div>
     
 </body>
