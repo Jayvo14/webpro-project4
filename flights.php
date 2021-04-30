@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <br><h1 id="ftitle">Flights</h1><br>
+    <br><h1 id="ftitle"> Flight 994 <br> ATL-NYC </h1><br>
     <img src="resources/flight.PNG" alt="seat-map" id="fimg" >
 
     <div id="flights">
