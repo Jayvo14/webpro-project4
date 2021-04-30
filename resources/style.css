@@ -31,7 +31,7 @@ body{
   
 .button a{
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 /* Does the validation styling for the site */
@@ -86,7 +86,7 @@ body{
 }
 a:active, a:visited{
     text-decoration: none;
-    color:#000000;
+    color:#ffffff;
 }
 
 /* here until '.floating' was INSPIRED BY w3 SCHOOLS */
