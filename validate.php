@@ -32,7 +32,7 @@
         }
         if($sum % 10 == 0){
           echo "<h1> Payment process approved! :) </h1>";
-          header( "Refresh:1; url=checkOut.php", true, 303);
+          header( "url=pickRL.php", true, 303);
         }else{
           echo "<h1> Unable to process payment... Please try again. </h1>";
           header( "Refresh:1; url=paynow.html", true, 303);
