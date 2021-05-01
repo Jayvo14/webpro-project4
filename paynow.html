@@ -115,6 +115,13 @@ function validateForm() {
 <body>
 <form name="contactForm" onsubmit="return validateForm()" method="POST" action="validate.php" >
     <h2 style="margin-left: 82px;">Payment Method</h2>
+    <h4>We accept major credit cards!</h4>
+    <div style="display: flex; flex-direction: row;">
+    	<span class="amex"/>
+	<span class="visa"/>
+	<span class="discover"/>
+	<span class="mastercard"/>
+    </div>
     <div style="display: flex; flex-direction: column;">
         <div style="display: flex; flex-direction: column;">
             <div class="error" id="nameErr" style="color: red; margin-left: 82px; height: 20px;"></div>
