@@ -248,3 +248,25 @@ hr{
     text-decoration: underline;
     font-weight: bold;
 }
+
+#map{
+    float: left;
+    background-color: #e0dfefb3;
+    border-radius: 5px;
+    padding: 3% 3% 3% 3%;
+    box-shadow: 5px 5px;
+}
+
+#map img{
+    height: 450px;
+    width: auto;
+}
+
+#pricing{
+    background-color: #e0dfefb3;
+    border-radius: 5px;
+    border-radius: 5px;
+    padding: 3% 3% 3% 3%;
+    float: right;
+    box-shadow: 5px 5px;
+}

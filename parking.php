@@ -31,6 +31,22 @@
         </form><br>
 
     </div>
+
+    <div id="map">
+        <img src="resources/parkingmap.png" alt="map">
+    </div>
+
+    <div id="pricing">
+        <span id="identP">Pricing</span>
+        <dl id="parkingprices">
+            <dt>Early Bird Special</dt>
+            <dd> 4am to 8am: $0</dd>
+            <dt>Rush Hour Pricing</dt>
+            <dd>8am to 6pm: $20</dd>
+            <dt>Late Night Pricing</dt>
+            <dd>6pm to 4am: $10</dd>
+        </dl>
+    </div>
     
 </body>
 </html>
