@@ -33,7 +33,7 @@
                   
           if( strcmp($_POST["pword"] , $_POST["cpword"]) != 0){
             echo "Error: Passwords provided do not match.\n";
-            $error = "true";-
+            $error = "true";
           }
 
           // so u dont have to rewrite everything over and over again
