@@ -1,61 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register!</title>
-    <link rel="shortcut icon" href="favi/lock.png" type="image/x-icon" />
-    <link rel="stylesheet" href="register.css" />
-  </head>
 
-  <body class="body">
-    <div class="navbar">
-      <div style="margin-left: 1%; float: left">
-        <a class="buttons" href="home.html">Home</a>
-      </div>
-      <div style="width: 90%; margin-right: 7%; text-align: center">
-        <h1>Create an Account!</h1>
-      </div>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="resources/style.css">
+  <title>Register!</title>
+</head>
 
-    <div class="main">
-      <div style="display: flex; justify-content: center">
-        <form action="register-submit.php" method="POST">
-          <div >
-            <br><br>
-            <div >
+<body>
 
-              <div class="fitb-section">
-                <label for="uname">Username:</label>
-                  <input type="text" id="uname" name="uname" value="" maxlength="40" />
-                
-              </div>
+  <div id="userForm">
 
-              
-              <br>
+    <h1>Create an Account</h1>
+    <p> Create an username and password! </p><br>
 
-              <div class="fitb-section">
-                <label for="cemail">Password:</label>
-                <input type="password" id="pword" name="pword" value="" maxlength="40" /><br />
-              </div>
-              <div class="fitb-section">
-               
-                <label for="cemail">Confirm Password:</label>
-                <input type="password" id="cpword" name="cpword" value="" maxlength="40" /><br />
+    <form action="register-submit.php" method="POST">
+      <div>
 
-              </div>
-            </div>
-            
+        <div>
+
+          <div class="fitb-section">
+            <label for="uname">Username:</label>
+            <input type="text" id="uname" name="uname" value="" maxlength="40" />
           </div>
-         
-          <br /><br />
-          <div style="display: flex; justify-content: center;">
-            <input class="buttons" type="submit" value="Submit" />
-          </div>
-        </form>
-      </div>
-    </div>
 
-   
-  </body>
+          <div class="fitb-section">
+            <label for="cemail">Password:</label>
+            <input type="password" id="pword" name="pword" value="" maxlength="40" /><br />
+          </div>
+
+          <div class="fitb-section">
+            <label for="cemail">Password:</label>
+            <input type="password" id="cpword" name="cpword" value="" maxlength="40" /><br />
+          </div>
+
+        </div>
+
+      </div><br><br>
+
+      <div>
+        <input class="button" type="submit" value="Submit" />
+      </div>
+
+      <div>
+        <a href="pickRL.php" class="button"> Go back </a>
+      </div><br>
+
+    </form>
+
+  </div>
+
+</body>
+
 </html>

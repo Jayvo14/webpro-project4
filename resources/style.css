@@ -76,9 +76,6 @@ body{
     float: left;
     width: 50%;
 }
-.row{
-    width: 50%;
-}
 .indexImgs{
     color: #000000;
     max-width: 75%;
@@ -228,7 +225,7 @@ hr{
 }
 
 
-/* styling for parking.php and displayFlights.php */
+/* styling for parking.php and displayParking.php */
 #parking{
     background-color: #e0dfefb3;
     border-radius: 5px;
@@ -239,7 +236,6 @@ hr{
 }
 #paddTC{
     display: inline-block;
-    padding: 5%;
 }
 #phome{
     margin: 5%;
@@ -249,28 +245,33 @@ hr{
     font-weight: bold;
 }
 
-#map{
-    float: left;
+#pimgs{
+    padding: 0 5%;
+}
+
+#pimg1{
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 5px;
     background-color: #e0dfefb3;
     border-radius: 5px;
-    padding: 3% 3% 3% 3%;
+}
+
+#pimg2{
+    width: 100%;
+    height: auto;
     box-shadow: 5px 5px;
-}
-
-#map img{
-    height: 450px;
-    width: auto;
-}
-
-#pricing{
-    background-color: #e0dfefb3;
+    background-color: #dcdcdc;
     border-radius: 5px;
-    border-radius: 5px;
-    padding: 3% 3% 3% 3%;
-    float: right;
-    box-shadow: 5px 5px;
+    margin-left: 3%;
 }
 
+.row{
+    display: flex;
+}
+
+
+/* styling for credit card things */
 .discover{
     background: url('discover.png');
 }

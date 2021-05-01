@@ -1,6 +1,6 @@
 <?php 
     // this is where we will update the users info and then reset the cart after the purchase is complete
-    //header('Location: index.html');
+    header('Location: processCheckout.php');
 
     $servername = "localhost";
     $username = "root";
@@ -42,8 +42,4 @@
         WHERE username = '$userN';";
     $result=$conn->query($sql);
 
-    // reset data, we empty the cart
-    // this should def come after cc check is complete 
-    $sql = "DELETE FROM cart";
-    $result=$conn->query($sql);
 ?>
