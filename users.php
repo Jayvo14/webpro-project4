@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div>
+    <div id="userForm">
 
         
         <?php   
@@ -39,7 +39,7 @@
             
             
         
-              if ($result->num_rows > 0) {
+            if ($result->num_rows > 0) {
         
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
@@ -50,7 +50,7 @@
         
                         $array=explode(",",$purchases);
                         $found=True;
-                        echo "<h2> " .$uName."'s Past Purchases </h2> <br> ";
+                        echo "<h1> " .$uName."'s Past Purchases </h1> <br> ";
                     
             
                         foreach($array as $key => $value){
@@ -60,12 +60,14 @@
                             else if(in_array($value,$flights)){
                                 echo "<p>  ".$value." Flight Ticket  </p>" ;
                             }
+                            echo '<hr>';
                         }
                     }
                         
                 }
             
-            } else {
+            } 
+            else {
                 echo "User does not exist";
             }
             if(!$found){
@@ -74,11 +76,9 @@
             }
         
             $conn->close();
-    ?>    
-         
-
-        <a href="index.html"><input type="button" class="button" id="btn1" value="Home"></a>
-
+        ?>    
+        
+        <br><br> <a href="index.html"><input type="button" class="button" id="btn1" value="Home"></a>
     </div>
     
 </body>

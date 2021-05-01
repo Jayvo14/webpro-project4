@@ -12,6 +12,8 @@
     
     
 
-    <a href="index.html"><input type="button" id="btn1" value="Home"></a><br>
+    <form action="postCheckout.php" method="post">
+        <input type="submit" class="button" value="Complete Purchase">
+    </form>
 </body>
 </html>

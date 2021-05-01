@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Form validation</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="resources/style.css">
+<script>
+// Defining a function to display error message
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+// Defining a function to validate form 
+function validateForm() {
+    var d = new Date();         // current date
+    var yr = d.getFullYear();   // current year
+    var mth = d.getMonth();     // current month (0-11)
+    mth += 1;                   // add one to translate month vals (1-12)
+    // Retrieving the values of form elements 
+    var cardnumber = document.contactForm.cardnumber.value;
+    var expdate = document.contactForm.expdate.value;
+    var name = document.contactForm.name.value;
+    var cvv = document.contactForm.cvv.value;
+    
+	// Defining error variables with a default value
+    var expdateErr = nameErr = cardnumberErr = cvvErr = true;
+    var regexname = /^([a-zA-Z\s]*)$/;   
+    var regexnum = /^([0-9]*)$/;
+    var regexdate = /^(1[0-2]|0[1-9])\/([0-9]{4})$/;
+    
+
+    // Validate name
+    if(name == "") {
+        printError("nameErr", "*Please enter the full name as it appears on the card.");
+    } else {           
+        if(regexname.test(name) === false) {
+            printError("nameErr", "*Please enter a valid name.");
+        } else {
+            printError("nameErr", "");
+            nameErr = false;
+        }
+    }
+
+    // Validate cardnumber
+    if(cardnumber == ""){
+        printError("cardnumberErr", "*Please enter the card number as it appears on the card.");
+    } else {
+        if(regexnum.test(cardnumber) === false){
+            printError("cardnumberErr", "*Please enter a valid card number.")
+        } else {
+            printError("cardnumberErr", "");
+            cardnumberErr = false;
+        }
+    }
+
+    // Validate expdate
+    if(expdate == "") {
+        printError("expdateErr", "*Please enter the date as it appears on the card.");
+    } else {
+        if(regexdate.test(expdate) === false) {
+            printError("expdateErr", "*Please enter a valid date (MM/YYYY).");
+        } else {
+            let res = expdate.split("/");       //split text to array via "/" delimitetr
+            res[0] = parseInt(res[0]);          //conver MONTH string to int. 
+            res[1] = parseInt(res[1]);          //conver YEAR string to int.
+            console.log(res[0], res[1]);
+            if (res[0] < 1 || res[0] > 12 || res[1] < yr || res[0] < mth){
+                printError("expdateErr", "This card is expired. Please enter a valid date (MM/YYYY).");
+            }else {
+                printError("expdateErr", "");
+                expdateErr = false;
+            }
+            
+        }
+    }
+    
+    //validate cvv
+    if(cvv == ""){
+        printError("cvvErr", "*Please enter the cvv as it appears on the card.");
+    } else {           
+        if(regexnum.test(cvv) === false) {
+            printError("cvvErr", "*Please enter a valid cvv.");
+        } else {
+            printError("cvvErr", "");
+            cvvErr = false;
+        }
+    }
+
+
+    // Prevent the form from being submitted if there are any errors
+    if((cardnumberErr || expdateErr || nameErr || cvvErr) == true) {
+       return false;
+    } else {
+        // Creating a string from input data for preview
+        var dataPreview = "You've entered the following details: \n" +
+                            "Full Name: " + name + "\n" + 
+                          "Card Number: " + cardnumber + "\n" +
+                          "Expiration: " + expdate + "\n" +
+                          "CVV: " + cvv + "\n";
+        alert(dataPreview);
+
+    }
+};
+</script>
+</head>
+<body>
+<form name="contactForm" onsubmit="return validateForm()" method="POST" action="validate.php" >
+    <h2 style="margin-left: 82px;">Payment Method</h2>
+    <div style="display: flex; flex-direction: column;">
+        <div style="display: flex; flex-direction: column;">
+            <div class="error" id="nameErr" style="color: red; margin-left: 82px; height: 20px;"></div>
+            <div style="display: flex; flex-direction: row; margin-left: 34px;">
+                <label>Full Name:</label>
+                <input type="text" name="name" style="margin-left: 10px;">
+            </div>
+        </div>
+        <br>
+        <div style="display: flex; flex-direction: column;">
+            <div class="error" id="cardnumberErr" style="color: red; margin-left: 82px; height: 20px;"></div>
+            <div style="display: flex; flex-direction: row; margin-left: 15px;">
+                <label>Card Number: </label>
+                <input type="text" name="cardnumber" id="cardNumber" style="margin-left: 10px;" onkeyup="keyup()">
+                <div id="cardType" style="margin-left: 10px; height: 20px;">
+                    <span id="cardTypeText"  ></span>
+                </div>
+                <script>
+                    var regexamex = /^3[4|7]\d{13}$/;
+                    var regexmastercard = /^5[1-5]\d{14}$/;
+                    var regexvisa = /^4[0-9]{12}(?:[0-9]{3})?$/;
+                    var regexdiscover = /^6(?:011\d{12}|5\d{14}|4[4-9]\d{13}|22(?:1(?:2[6-9]|[3-9]\d)|[2-8]\d{2}|9(?:[01]\d|2[0-5]))\d{10})$/;
+
+                    var input;
+                    var cardText = document.getElementById("cardTypeText");
+                    var current;
+                    function keyup(){
+                        var e = document.getElementById("cardNumber");
+                        input = e.value;
+                        console.log("input ==> ", input);
+                        if (regexamex.test(input) === true ) {
+                            cardText.className = "amex";
+                            current = "amex";
+                        } 
+                        else if ( regexdiscover.test(input) === true  ) {
+                            cardText.className = "discover";
+                            current = "discover";
+                        } 
+                        else if ( regexmastercard.test(input) === true  ) {
+                            cardText.className = "mastercard";
+                            current = "mastercard";
+                        } 
+                        else if ( regexvisa.test(input) === true  ) {
+                            cardText.className = "visa";
+                            current = "visa";
+                        } 
+                        else {
+                            cardText.classList.remove(current);
+                            // printError("cardnumberErr", "We accept Visa, Mastercard, Amex, and Discover");
+                        }
+                        console.log(cardText);
+                    }
+                </script>
+            </div>
+            
+        </div>
+        <br>
+        <div style="display: flex; flex-direction: column;">
+            <div class="error" id="expdateErr" style="color: red; margin-left: 82px; height: 20px;"></div>
+            <div style="display: flex; flex-direction: row;">
+                <label>Expiration Date:</label>
+                <input type="text" name="expdate" style="margin-left: 10px;">
+            </div>
+        </div>
+        <br>
+        <div style="display: flex; flex-direction: column;">
+            <div class="error" id="cvvErr" style="color: red; margin-left: 82px; height: 20px;"></div>
+            <div style="display: flex; flex-direction: row; margin-left: 68px;">
+                <label>CVV:</label>
+                <input type="text" name="cvv" style="margin-left: 10px;">
+            </div>
+        </div>
+        <br>
+        
+    </div>
+    <br>
+    <button type='submit' style="margin-left: 115px;"  >Add</button> 
+    <!-- onclick="return validateForm()" -->
+</form>
+<br>
+<div id="previousSubmit" style="margin-left: 82px; height: 20px;"></div>
+</body>
+</html>                            

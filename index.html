@@ -13,55 +13,63 @@
 <body>
 
 	<div>
-		<h1> The First Ethical Travel Agent </h1>
+		<h1 id="mainTitle"> Ethical Traveling </h1>
 	</div>
-	<!-- Half the site will be booking flights, other half will be the parking spots -->
+		
+	<br><br><div class="menu">
+		<div class="col floating">
+			<div class="container">
+				<a href="flights.php">
+					<img src="resources/plane.gif" alt="flights" class="indexImgs">
+					<div class="overlay">
+						<div class="text">Flights</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+		<div class="col floating">
+			<div class="container">
+				<a href="parking.php">
+					<img src="resources/parking.gif" alt="parking" class="indexImgs">
+					<div class="overlay">
+						<div class="text">Parking</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
+	</div>
 
 	<div id="menu2">
-		<div>
-			<a href="flights.php"><input class="button" type="button" id="btn1" value="Flights"></a>
-		</div><br>
-		
-		<div>
-			<a href="parking.php"><input class="button" type="button" id="btn1" value="Parking"></a>
-		</div><br>
+		<form>
+			<div>
+				<a href="shoppingCart.php" class="button"> Cart </a>
+			</div><br>
+	
+			<div>
+				<a href="userSearch.php" class="button"> User Search </a>
+			</div><br>
 
-		<div>
-			<a href="index.html"><input class="button" type="button" id="btn1" value="Login/Signup"></a>
-		</div><br>
-
-		<div>
-			<a href="shoppingCart.php"><input class="button" type="button" id="btn1" value="Cart"></a>
-		</div><br>
-
-		<div>
-			<a href="userSearch.php"><input class="button" type="button" id="btn1" value="User Search"></a>
-		</div>
+			<div>
+				<a href="index.html" class="button" > Login/Signup </a>
+			</div><br>
+		</form>
 	</div>
 
-	<!--
-	<div class="menu">
-		<div class="col">
-			<a href="flights.php"><input class="button" type="button" id="btn1" value="Flights"></a>
-		</div>
-		
-		<div class="col">
-			<a href="parking.php"><input class="button" type="button" id="btn1" value="Parking"></a>
-		</div>
+	<div class="audio"> <!-- audio section -->
+		<br>
+		<audio autoplay controls loop>
+			<source src="resources/beat.mp3" type="audio/mp3">
+		</audio>
+	</div>
 
-	</div><br>
-
-	<div class="menu">
-		
-		<div class="col">
-			<a href="index.html"><input class="button" type="button" id="btn1" value="Login/Signup"></a>
-		</div>
-
-		<div class="col">
-			<a href="shoppingCart.php"><input class="button" type="button" id="btn1" value="Cart"></a>
+	<div> <!--Validation footer-->
+		<div id="w3c"><br><br>
+			<a href="https://html5.validator.nu/?doc=https%3A%2F%2Fcodd.cs.gsu.edu%2F%7Eamustafa3%2Fpw%2Fpw4%2Findex.html" target="_blank"><img src="resources/w3-html.png" alt="Valid HTML"/></a>
+			<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcodd.cs.gsu.edu%2F%7Eamustafa3%2Fpw%2Fpw4%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank"><img src="resources/w3-css.png" alt="Valid CSS"/></a>
 		</div>
 	</div>
-	-->
 
 </body>
 

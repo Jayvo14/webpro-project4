@@ -6,12 +6,12 @@ body{
     color: #000000;
     padding: 0 4%;
     margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 /* Does the button styling for the site */
 .button {
-    background-color: #369066; 
+    background-color: #721529; 
     border-radius: 4px;
     border: none;
     color: white;
@@ -25,18 +25,38 @@ body{
 }
 
 .button:hover {
-    background-color: #295f39;
+    background-color: #2e050e;
     color: white;
 }
   
 .button a{
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
+}
+
+/* Does the validation styling for the site */
+#w3c{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+/* Does the audio styling for the site */
+.audio{
+    opacity: .3;
+    background-color: #f9f9f5;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 /* all the styling for the main page index.html */
+#mainTitle{
+    margin-bottom: -4%;
+    font-size: 50px;
+    font-family: monospace;
+}
 .menu{
-    /* background-color: #e0dfefb3; */
     border-radius: 5px;
     padding: 3% 0;
     margin: 0 auto;
@@ -46,14 +66,66 @@ body{
 
 #menu2{
     background-color: #e0dfefb3;
+    box-shadow: 5px 5px;
     border-radius: 5px;
-    padding: 3% 0;
-    margin: 0 auto;
+    margin: 1% 25%;
+    padding: 5% 0%;
 }
 
 .col{
     float: left;
     width: 50%;
+}
+.row{
+    width: 50%;
+}
+.indexImgs{
+    color: #000000;
+    max-width: 75%;
+    border-radius: 5px;
+    box-shadow: 5px 5px;
+}
+a:active, a:visited{
+    text-decoration: none;
+    color:#ffffff;
+}
+
+/* here until '.floating' was INSPIRED BY w3 SCHOOLS */
+.container{
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+}
+.text{
+    color: #e3e0ff;
+    font-size: 60px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container:hover .overlay {
+    opacity: 1;
+}
+.floating {  
+    animation-name: float;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+  
+@keyframes float {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
 }
 @media screen and (max-width: 600px) {
     .col {
@@ -69,6 +141,7 @@ body{
     margin: 0 auto;
     width: 40%;
     max-height: 75%;
+    box-shadow: 5px 5px;
 }
 
 #cart-bottom{
@@ -79,18 +152,141 @@ body{
 
 .cart-item{
     font-size: large;
+    border-bottom: 2px solid #0000001e;
 }
 table, tbody{
     margin: 0 auto;
     text-align: center;
     width: 50%;
+    padding: 3% 0;
 }
 tr{
     padding: 4px 0;
-    border-bottom: 2px solid #000000;
 }
 td{
     display: table-cell;
-    padding: 10% 15%;
+    padding: 5% 3%;
     margin: auto;
+    border-bottom: 2px solid #0000001e;
+}
+#cartImg{
+    max-width: 25%;
+}
+
+
+
+/* styling for userSearch.php and users.php */
+#userForm{
+    margin: 10% 20%;
+    padding: 5% 0%;
+    background-color: #e0dfefb3;
+    border-radius: 5px;
+    box-shadow: 5px 5px;
+}
+hr{
+    width: 50%;
+}
+
+
+/* styling for flights.php and displayFlights.php */
+#ftitle{
+    z-index: 3;
+    position: relative;
+    margin-bottom: -10%;
+}
+#flights{
+    background-color: #e0dfefb3;
+    border-radius: 5px;
+    margin: -6% 25% 5% 25%;
+    padding: 5% 0% 5% 0%;
+    z-index: 1;
+    box-shadow: 5px 5px;
+}
+#fimg{
+    max-width: 33%;
+    border-radius: 100%;
+    z-index: 2;
+    margin: -2% 0 0 0;
+}
+.grid{
+    margin: 0 auto;
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    grid-template-columns: 0fr 0fr 0fr 0fr;
+}
+#fcell{
+    width: max-content;
+    padding-left: 3px;
+}
+#faddTC{
+    display: initial;
+    padding: 5%;
+}
+#fhome{
+    margin: 5%;
+}
+
+
+/* styling for parking.php and displayFlights.php */
+#parking{
+    background-color: #e0dfefb3;
+    border-radius: 5px;
+    margin: 5% 25% 5% 25%;
+    padding: 5% 0% 5% 0%;
+    z-index: 1;
+    box-shadow: 5px 5px;
+}
+#paddTC{
+    display: inline-block;
+    padding: 5%;
+}
+#phome{
+    margin: 5%;
+}
+#identP{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#map{
+    float: left;
+    background-color: #e0dfefb3;
+    border-radius: 5px;
+    padding: 3% 3% 3% 3%;
+    box-shadow: 5px 5px;
+}
+
+#map img{
+    height: 450px;
+    width: auto;
+}
+
+#pricing{
+    background-color: #e0dfefb3;
+    border-radius: 5px;
+    border-radius: 5px;
+    padding: 3% 3% 3% 3%;
+    float: right;
+    box-shadow: 5px 5px;
+}
+
+.discover{
+    background: url(resources/discover.png);
+}
+.amex{
+    background-image: url(resources/amex.png);
+}
+.mastercard{
+    background-image: url(resources/mastercard.png);
+}
+.visa{
+    background-image: url(resources/visa.png);
+}
+span{
+    width: 40px; 
+    height: 30px; 
+    background-size: contain !important; 
+    display: block;
+    background-repeat: no-repeat !important;
 }

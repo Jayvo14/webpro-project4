@@ -9,15 +9,20 @@
 </head>
 <body>
 
-    <div>
+    <br><h1 id="ftitle"> Flight 994 <br> ATL-NYC </h1><br>
+    <img src="resources/flight.PNG" alt="seat-map" id="fimg" >
 
-        <h2>Flights</h2>
+    <div id="flights">
         <form action="addToCart.php" method="POST">
-            <?php include 'displayFlights.php'; ?>
-            <input type="submit" class="button" value="Add to Cart">
+            <section class="grid">
+                <?php include 'displayFlights.php'; ?>
+            </section><br>
+            <div id="faddTC" class="row">
+                <a id="fhome" href="index.html"><input type="button" class="button" id="btn1" value="Home"></a>
+                <input id="fhome" type="submit" class="button" value="Add to Cart">
+            </div>
         </form><br>
 
-        <a href="index.html"><input type="button" class="button" id="btn1" value="Home"></a>
 
     </div>
     

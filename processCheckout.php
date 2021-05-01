@@ -47,9 +47,4 @@
         }
     }
 
-    // then we empty the cart
-    // this should def come after cc check is complete 
-    $sql = "DELETE FROM cart";
-    $result=$conn->query($sql);
-
 ?>
