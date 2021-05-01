@@ -21,38 +21,33 @@
     <div class="main">
       <div style="display: flex; justify-content: center">
         <form action="register-submit.php" method="POST">
-          <div style="display: flex; flex-direction: column; justify-content: center;">
+          <div >
             <br><br>
-            <div style="display: flex; flex-direction: row; justify-content: center">
+            <div >
+
               <div class="fitb-section">
-                <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname" value="" maxlength="20" /><br />
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" value="" maxlength="40" /><br />
+                <label for="uname">Username:</label>
+                  <input type="text" id="uname" name="uname" value="" maxlength="40" />
+                
+              </div>
+
+              
+              <br>
+
+              <div class="fitb-section">
                 <label for="cemail">Password:</label>
                 <input type="password" id="pword" name="pword" value="" maxlength="40" /><br />
               </div>
               <div class="fitb-section">
-                <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname" value="" maxlength="20" /><br />
-                <label for="cemail">Confirm Email:</label>
-                <input type="text" id="cemail" name="cemail" value="" maxlength="40" /><br />
+               
                 <label for="cemail">Confirm Password:</label>
                 <input type="password" id="cpword" name="cpword" value="" maxlength="40" /><br />
 
               </div>
             </div>
-            <div class="fitb-section">
-              <label for="uname">Username:</label>
-                <input type="text" id="uname" name="uname" value="" maxlength="16" size="1"/><br />
-              <br />
-            </div>
+            
           </div>
-          <label>
-            <input type="checkbox" name="terms"/> Please agree to our
-            <a class="termsserv" href="#service">Terms of Service</a> and
-            <a class="termsserv" href="#policy">Privacy Policy</a>            
-          </label>
+         
           <br /><br />
           <div style="display: flex; justify-content: center;">
             <input class="buttons" type="submit" value="Submit" />
@@ -61,11 +56,6 @@
       </div>
     </div>
 
-    <div> <!--Validation footer-->
-      <div id="w3c"><br><br>
-          <a href="https://html5.validator.nu/?doc=https%3A%2F%2Fcodd.cs.gsu.edu%2F%7Eamustafa3%2Fpw%2Fpw3%2Fregister.html" target="_blank"><img src="resources/w3-html.png" alt="Valid HTML"/></a>
-          <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcodd.cs.gsu.edu%2F%7Eamustafa3%2Fpw%2Fpw3%2Fregister.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank"><img src="resources/w3-css.png" alt="Valid CSS"/></a>
-      </div>
-  </div>
+   
   </body>
 </html>

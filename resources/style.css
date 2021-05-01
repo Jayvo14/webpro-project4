@@ -272,16 +272,16 @@ hr{
 }
 
 .discover{
-    background: url(resources/discover.png);
+    background: url('discover.png');
 }
 .amex{
-    background-image: url(resources/amex.png);
+    background-image: url('amex.png');
 }
 .mastercard{
-    background-image: url(resources/mastercard.png);
+    background-image: url('mastercard.png');
 }
 .visa{
-    background-image: url(resources/visa.png);
+    background-image: url('visa.png');
 }
 span{
     width: 40px; 
