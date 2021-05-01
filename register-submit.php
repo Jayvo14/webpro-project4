@@ -33,7 +33,7 @@
                   
           if( strcmp($_POST["pword"] , $_POST["cpword"]) != 0){
             echo "Error: Passwords provided do not match.\n";
-            $error = "true";
+            $error = "true";-
           }
 
           // so u dont have to rewrite everything over and over again
@@ -80,6 +80,13 @@
               $sql = "INSERT INTO users (username, purchases) VALUES ('$userN','')";
               $result=$conn->query($sql);
             }
+
+            echo '
+                <form action="checkOut.php" method="post">
+                  <input type="hidden" name="uname" value="'.$userN.'">
+                  <input type="submit" class="button" value="Continue to Checkout">
+                </form>
+                ';
           }
 
 
@@ -87,12 +94,6 @@
         }else{
           echo "<pre style="."text-align:center;"."> Please enter credentials! </pre>";
         }
-        
-        echo ' 
-        <form action=".php" method="post">
-          <input type="submit" class="button" value="Complete Purchase">
-        </form>
-        ';
 
       ?>
 
