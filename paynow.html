@@ -65,13 +65,21 @@ function validateForm() {
             res[0] = parseInt(res[0]);          //conver MONTH string to int. 
             res[1] = parseInt(res[1]);          //conver YEAR string to int.
             console.log(res[0], res[1]);
-            if (res[0] < 1 || res[0] > 12 || res[1] < yr || res[0] < mth){
+            if (res[0] < 1 || res[0] > 12 || res[1] < yr){
                 printError("expdateErr", "This card is expired. Please enter a valid date (MM/YYYY).");
             }else {
-                printError("expdateErr", "");
-                expdateErr = false;
+		if(res[1] == yr){
+		    if(res[0] < mth){
+		    	printError("expdateErr", "This card is expired. Please enter a valid date (MM/YYYY).");
+		    }else{
+		    	printError("expdateErr", "");
+                	expdateErr = false;
+		    }
+		}else{
+		    printError("expdateErr", "");
+		    expdateErr = false;
+		}
             }
-            
         }
     }
     
