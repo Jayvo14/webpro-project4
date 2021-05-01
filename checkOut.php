@@ -10,9 +10,15 @@
 <body>
     <h2>Check Out</h2>
     
-    
+    <p> Order is ready to be processed! </p>
 
-    <form action="postCheckout.php" method="post">
+    <?php 
+
+    $uName = $_POST["uname"];
+
+    echo '<form action="postCheckout.php" method="post">
+        <input type="hidden" name="uname" value="'.$uName.'">';
+    ?>
         <input type="submit" class="button" value="Complete Purchase">
     </form>
 </body>

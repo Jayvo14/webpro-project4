@@ -36,7 +36,7 @@
 
         if( in_array($value, $parking) ){
             $sql = "UPDATE parking 
-            SET spots = spots - 1 
+            SET spots = (spots - 1) 
             WHERE section = '$value'";
             $result=$conn->query($sql);
         }else{
