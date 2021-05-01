@@ -27,7 +27,7 @@
             </div><br>
 
             <div class="col">
-                <form action="processCheckout.php" method="post">
+                <form action="paynow.html" method="post">
                     <input type="submit" class="button" value="Check Out">
                 </form>
             </div>

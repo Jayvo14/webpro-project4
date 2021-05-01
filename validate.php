@@ -7,11 +7,6 @@
   </head>
   <body>
       <?php
-        //print $_POST INFO
-        // echo "NAME ==>" . $_POST["name"] . "; ";
-        // echo "CC ==>" . $_POST["cardnumber"] . "; ";
-        // echo "EXP ==>" . $_POST["expdate"] . "; ";
-        // echo "CVV ==>" . $_POST["cvv"] . "; " . "<br>";
         
         //declare / init vars
         $cc = str_split($_POST["cardnumber"]);    // card number into array
