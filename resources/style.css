@@ -270,3 +270,23 @@ hr{
     float: right;
     box-shadow: 5px 5px;
 }
+
+.discover{
+    background: url(resources/discover.png);
+}
+.amex{
+    background-image: url(resources/amex.png);
+}
+.mastercard{
+    background-image: url(resources/mastercard.png);
+}
+.visa{
+    background-image: url(resources/visa.png);
+}
+span{
+    width: 40px; 
+    height: 30px; 
+    background-size: contain !important; 
+    display: block;
+    background-repeat: no-repeat !important;
+}
